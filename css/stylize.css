@@ -1,0 +1,178 @@
+/*
+    Document       : css/stylize．css
+    Created on     : 2014-11-18 11:19 AM
+    Author         : Callum White 2014
+    Colour Pallet  :
+        Light Orange: #F90
+        Mid Orange: #E68A00
+        Dark Orange: #CF7C00
+        Dark Grey: #222
+        Light Grey: #888
+*/
+
+root {
+    display: block;
+}
+
+body {
+    background: #ddd;
+    font-family: helvetica, arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    margin-top: 35px;
+}
+
+header {
+    height: 250px;
+    background-image: url(../images/skyline.jpg);
+    margin: 0;
+    padding: 0;
+    position: relative;
+    bottom: 35px;
+
+}
+
+h1 {
+    font-size: 50px;
+    padding-left: 10px;
+    color: #CF7C00;
+    text-shadow: -5px 5px #333;
+}
+
+h1:first-letter {
+    font-size: 80px;
+    font-weight: 700;
+    letter-spacing: -6px;
+}
+
+.blogPost {
+    width: auto;
+    margin-left: 100px;
+    padding-right: 30px;
+    position: relative;
+    bottom: 30px;
+}
+
+div.navigation {
+    float: left;
+    width: 70px;
+    height: 345px;
+    margin-right: 30px;
+    background: #222;
+    padding-top: 10px;
+    position: relative;
+    bottom: 10px;
+}
+
+a {
+    display: block;
+    background: #F90;
+    padding: 20px 5px 0px 10px;
+    margin: 5px;
+    width: 70px;
+    height: 40px;
+    color: #111;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    position: relative;
+    left: 5px;
+    box-shadow: -5px 0 5px #666;
+    color: blue;
+}
+
+a:active {
+    background: #822;
+}
+
+h2 {
+    background: #222;
+    position: relative;
+    left: 10px;
+    padding: 10px 0 10px 10px;
+    color: #CF7C00;
+}
+
+p {
+    background: white;
+    position: relative;
+    left: 10px;
+    padding: 15px
+}
+
+h3 {
+    position: relative;
+    left: 10px;
+    background: #222;
+    padding: 5px 30px;
+    color: #888;
+    font-size: 10px;
+}
+
+div#image {
+    width: auto;
+    background: white;
+    margin-left: 10px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    height: auto;
+    width: auto;
+}
+
+ol, ul {
+    position: relative;
+    left: 10px;
+    background: white;
+    padding: 10px 40px;
+}
+
+li {
+    padding: 1px;
+}
+
+footer {
+    background: #222;
+    position: fixed;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 30px;
+}
+
+h4 {
+    color: #888;
+    text-align: center;
+    width: auto;
+    position: relative;
+    bottom: 15px;
+}
+
+#post1 {
+    margin-bottom: 40px;
+}
+
+section#promo {
+    background: white;
+    margin-left: 10px;
+    width: auto;
+    height: 420px;
+}
+
+img#my_face {
+    float: right;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+}
+
+.clearfix {
+    clear: both;
+    margin-right: 10px;
+}
