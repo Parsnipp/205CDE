@@ -53,7 +53,7 @@ h1:first-letter {
     bottom: 30px;
 }
 
-div.navigation {
+/* div.navigation {
     float: left;
     width: 70px;
     height: 345px;
@@ -62,7 +62,7 @@ div.navigation {
     padding-top: 10px;
     position: relative;
     bottom: 10px;
-}
+} */
 
 a {
     display: block;
