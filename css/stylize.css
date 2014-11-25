@@ -65,8 +65,8 @@ h1:first-letter {
 } */
 
 a {
-    display: block;
-    background: #F90;
+    display: inline;
+    background: black;
     padding: 20px 5px 0px 10px;
     margin: 5px;
     width: 70px;
