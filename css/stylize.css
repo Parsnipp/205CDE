@@ -46,17 +46,23 @@ h1:first-letter {
 }
 
 .blogPost {
-    width: auto;
-    margin: 0 50px;
-    padding-right: 30px;
+    width: 800px;
+    margin: auto;
     position: relative;
     bottom: 40px;
+    right: 10px;
 }
 
 div.navigation {
     position: relative;
     bottom: 40px;
-    background: #222
+    background: #222;
+    width: fill;
+}
+
+nav {
+    width: 800px;
+    margin: auto;
 }
 
 a {
@@ -177,6 +183,13 @@ img#my_face {
 }
 
 #intro {
-    padding: 15px 0 15px 15px;
-    margin-right: 25px;
+    padding: 15px 25px 15px 15px;
+}
+
+#about_me {
+    width: 800px;
+    height: 380px;
+    margin: auto;
+    background: white;
+    margin-bottom: 100px;
 }
