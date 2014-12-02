@@ -17,11 +17,10 @@
 
     body {
         background: #bbb;
-        font-family: helvetica, arial, sans-serif;
+        font-family: 'Droid Sans', helvetica, arial, sans-serif;
         -webkit-font-smoothing: antialiased;
         text-rendering: optimizelegibility;
         margin-top: 35px;
-        letter-spacing: 0.5px;
     }
 
     header {
