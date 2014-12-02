@@ -11,17 +11,37 @@ To change this template use Tools | Templates.
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
 
         <link rel="stylesheet" type="text/css" href="css/stylize.css">
+
+        <script type="text/javascript">
+
+            function window_onload() {
+                window.addEventListener("scroll",navbar_reset_top,false);
+            }
+
+            var navbar_top=210;
+
+            function navbar_reset_top() {
+                var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+                if(scrollTop>navbar_top&&navbar.className==="nav-move") {
+                    document.getElementById("navbar").className="nav-fixed";
+                }
+                else if(scrollTop<navbar_top&&navbar.className==="nav-fixed") {
+                    document.getElementById("navbar").className="nav-move";
+                }
+            }
+
+        </script>
         
     </head>
 
-    <body>
+    <body onload="javascript:window_onload();">
         <div id="title">
             <header>
                 <h1>Welcome To My Website!</h1>
             </header>
         </div>
 
-        <div class="navigation" id="nav-box">
+        <div id="navbar" class="nav-move">
             <nav id="nav-inner">
                 <a href="index.html">Home</a>
                 <a href="blog.html">Blog</a>
@@ -30,14 +50,28 @@ To change this template use Tools | Templates.
                 <a href="images.html">Say Hey</a>
             </nav>
         </div>
+        
+        <div id="content">
+            <div id="about_me">
+                <article class="blogPost" id="post3">
+                    <section id="promo">
+                        <p id="intro">
+                            <img src="images/mah_face.jpg" alt="This is me" id="my_face" width="390" height="390">
+                            <em id="ptitle">Hi I'm Callum</em>
+                            <br>
+                            <br>
+                            Cornhole put a bird on it's beard, that's my motto. Just kidding, I don't even know what it means, but it sound's cool.
+                            <br>
+                            <br>
+                            I live for the internet, I make websites, play online games and am always looking up new pieces of information that interests me.
+                            <br>
+                            <br> 
+                            I once won a game of Trivial Pursuit so I must know a thing or two.
+                        </p>
 
-        <div id="about_me">
-            <article class="blogPost" id="post3">
-                <section id="promo">
-                    <p id="intro"><img src="images/mah_face.jpg" alt="This is me" id="my_face" width="390" height="390"><em id="ptitle">Hi I'm Callum</em><br><br>Cornhole put a bird on it's beard, that's my motto. Just kidding, I don't even know what it means, but it sound's cool.<br><br>I live for the internet, I make websites, play online games and am always looking up new pieces of information that interests me.<br><br> I once won a game of Trivial Pursuit so I must know a thing or two.</p>
-
-                </section>
-            </article>
+                    </section>
+                </article>
+            </div>
         </div>
 
         <footer>
