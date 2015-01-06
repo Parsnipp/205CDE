@@ -206,6 +206,17 @@
         background: white;
         margin-bottom: 100px;
     }
+    
+    .form {
+        background: white;
+        width: 800px;
+        margin: 0 auto;
+    }
+    .form-item {
+        width: fill;
+        margin: auto;
+    }
+    
 }
 
 /* @media handheld {

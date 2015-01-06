@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Callum White</title>
+        
+        <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+
+        <link rel="stylesheet" type="text/css" href="css/stylize.css">
+
+        <script type="text/javascript">
+
+            function window_onload() {
+                window.addEventListener("scroll",navbar_reset_top,false);
+                console.log('onLoad');
+                var form = document.forms.register;
+                form.onsubmit = function() {
+                    console.log('onSubmit');
+                    if (form.name.value.length == 0) {
+                        console.log('empty field');
+                        document.getElementById('nameError').innerHTML = 'Name field empty'
+                        return false;
+                    } else {
+                        document.getElementById('nameError').innerHTML = ''
+                    } // if
+                    return true;
+                } // onSubmit
+
+                form.name.onblur = function() {
+                    console.log('onBlur');
+                    if (form.name.value.length == 0) {
+                        console.log('empty field');
+                        document.getElementById('nameError').innerHTML = 'Name field empty';
+                        return false;
+                    } else {
+                        document.getElementById('nameError').innerHTML = '';
+                    } // if
+                } // onBlur
+
+                form.email.onkeyup = function() {
+                    console.log('onKeyUp');
+                    form.email.value = form.email.value.replace(' ', '');
+                    if (form.email.value.length == 0 || isNaN(form.email.value)) {
+                        console.log('failed validation');
+                        document.getElementById('emailError').innerHTML = 'Invalid email address';
+                    } else {
+                        document.getElementById('emailError').innerHTML = '';
+                    }
+                } // onKeyUp
+
+            }
+
+            var navbar_top=210;
+
+            function navbar_reset_top() {
+                var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+                if(scrollTop>navbar_top&&navbar.className==="nav-move") {
+                    document.getElementById("navbar").className="nav-fixed";
+                }
+                else if(scrollTop<navbar_top&&navbar.className==="nav-fixed") {
+                    document.getElementById("navbar").className="nav-move";
+                }
+            }
+
+        </script>
+        
+    </head>
+
+    <body onload="javascript:window_onload();">
+        <div id="title">
+            <header>
+                <h1>Welcome To My Website!</h1>
+            </header>
+        </div>
+
+        <div id="navbar" class="nav-move">
+            <nav id="nav-inner">
+                <a href="index.html">Home</a>
+                <a href="blog.html">Blog</a>
+                <a href="about.html">About</a>
+                <a href="images.html">Portfolio</a>
+                <a href="contact.html">Say Hey</a>
+            </nav>
+        </div>
+        
+        <div class="form">
+            <form name="Contact Details" method="post" action="http://www.google.co.uk/">
+                <p class="form-item">Name:<br><input type="text" name="name"/><span id="nameError"></span></p>
+                <p class="form-item">Email:<br><input type="text" name="email"/><span id="emailError"></span></p>
+                <p class="form-item"><input type="submit"/></p>
+            </form>
+        </div>
+        
+        <footer>
+            <h4>Page by Callum &copy;2014</h4>
+        </footer>
+    </body>
+</html>
